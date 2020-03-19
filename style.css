@@ -1,0 +1,69 @@
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+svg{
+    width: 500px;
+}
+#snow_1{
+    animation: snow 5s infinite;
+    transform-box: fill-box;
+}
+#snow_2{
+    animation: snow 3s infinite;
+    transform-box: fill-box;
+}
+#bonhomme{
+    animation: bonhomme 2.5s infinite alternate ease;
+    transform-box: fill-box;
+    transform-origin: bottom;
+}
+#tail{
+    animation: tail 3s ease infinite alternate;
+    transform-box: fill-box;
+}
+#guirlande_1{
+    animation: guirlande_1 ease 2s infinite alternate;
+}
+#guirlande_2{
+    animation: guirlande_2 ease 4s infinite alternate;
+}
+@keyframes snow{
+    from{
+        transform: translateY(-100%);
+        opacity: 1;
+    }to{
+        transform: translateY(80%);
+        opacity: 0;
+    }
+}
+@keyframes bonhomme{
+    from{
+        transform: rotateZ(-5deg);
+    }to{
+        transform: rotateZ(5deg);
+    }
+}
+@keyframes tail{
+    from{
+        transform: rotateZ(-10deg);
+    }to{
+        transform: rotateZ(10deg);
+    }
+}
+@keyframes guirlande_1{
+    from{
+        fill: #A42B91;
+    }to{
+        fill: orange;
+    }
+}
+@keyframes guirlande_2{
+    from{
+        fill: navy;
+    }to{
+        fill: violet;
+    }
+}
